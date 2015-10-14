@@ -1,0 +1,30 @@
+{
+  "name": "reduxBank",
+  "version": "1.0.0",
+  "description": "simple banking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3moz/reduxBank.git"
+  },
+  "author": "eric moskowitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3moz/reduxBank/issues"
+  },
+  "homepage": "https://github.com/3moz/reduxBank",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "babel-plugin-react-transform": "^1.1.1",
+    "react-transform-hmr": "^1.0.1",
+    "webpack": "^1.12.2",
+    "webpack-hot-middleware": "^2.4.1"
+  },
+  "dependencies": {
+    "redux-thunk": "^1.0.0"
+  }
+}
