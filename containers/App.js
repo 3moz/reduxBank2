@@ -1,16 +1,38 @@
+import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import Transactor from '../components/Transactor';
-import * as TransactorActions from '../actions/transactor';
+import Header from '../components/Header';
+import Ledger from '../components/Ledger';
+import * as TransactionActions from '../actions/transactions';
 
-function mapStatetoProps(state) {
+class App extends Component {
+
+  render(){
+
+    console.log(this);
+
+    const {transactionItems, dispatch} = this.props;
+    const actions = bindActionCreators(TransactionActions, dispatch);
+
+    return (
+
+      <div>
+        <Header addTransaction={actions.addTransaction}/>
+        <Ledger transactionItems={transactions}/>
+      </div>
+    );
+  }
+}
+
+App.propTypes = {
+  transactionItems: PropTypes.array.isRequired,
+  dispatch: PropTypes.func.isRequired
+}
+
+function mapStateToProps(state) {
   return {
-    balance: state.balance
-  };
+    transactionItems: state.transactionItems
+  }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators(TransactorActions, dispatch)
-}
-
-export default connect(mapStatetoProps, mapDispatchToProps)(Transactor);
+export default connect(mapStateToProps)(App)
