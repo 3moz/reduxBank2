@@ -6,4 +6,3 @@ a simple banking app using flux / redux / react
 - make a withdrawal
 - see a running transaction history (a ledger)
 - see a balance
-
