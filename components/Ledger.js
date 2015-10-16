@@ -1,30 +1,24 @@
 import React, {Component, PropTypes} from 'react';
-import TransactionItem from './TransactionItem';
+import Transaction from './Transaction';
 
-class Ledger extends Component {
-
-  //receives transactionItem, which is a value, which in turn comes from state
-
+export default class Ledger extends Component {
   render() {
     
-    console.log('Ledger props: ');
     console.log(this.props);
+    return (
 
-    return(
-      
       <ul>
-        {transactions.map(
-          transaction => <TransactionItem/>)
-        }
+        Transaction Ledger:
+        
+        {this.props.transactions.map(
+         (transaction, index) => <Transaction key={index} value={transaction}/>
+        )}
       </ul>
-
     );
   }
-
 }
 
 Ledger.propTypes = {
   transactions: PropTypes.array.isRequired
 }
 
-export default Ledger;

@@ -1,37 +1,45 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import Header from '../components/Header';
+import AddTransaction from '../components/AddTransaction';
+import Balance from '../components/Balance';
 import Ledger from '../components/Ledger';
-import * as TransactionActions from '../actions/transactions';
+import Transaction from '../components/Transaction';
+import {addTransaction} from '../actions/transactions';
 
 class App extends Component {
 
   render(){
+    //injected by connect() call;
 
-    console.log(this);
-
-    const {transactionItems, dispatch} = this.props;
-    const actions = bindActionCreators(TransactionActions, dispatch);
+    const {dispatch, transactions, balance} = this.props;
 
     return (
 
       <div>
-        <Header addTransaction={actions.addTransaction}/>
-        <Ledger transactionItems={transactions}/>
-      </div>
-    );
+
+        <Balance balance={balance}/>
+
+        <AddTransaction onAddClick={value => dispatch(addTransaction(parseInt(value)))}/>
+
+        <Ledger transactions={transactions}/>
+
+      </div>    
+    )
   }
 }
 
 App.propTypes = {
-  transactionItems: PropTypes.array.isRequired,
-  dispatch: PropTypes.func.isRequired
-}
+  transactions: PropTypes.array.isRequired,
+  balance: PropTypes.number.isRequired
+};
 
 function mapStateToProps(state) {
+  // console.log(state.transactions[state.transactions.length-1].transactions); 
+  // console.log(state.transactions[state.transactions.length-1].balance);
   return {
-    transactionItems: state.transactionItems
+    transactions: state.transactions[state.transactions.length-1].transactions, //[]
+    balance: state.transactions[state.transactions.length-1].balance // number
   }
 }
 
