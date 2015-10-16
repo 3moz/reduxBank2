@@ -7,7 +7,7 @@ import Ledger from '../components/Ledger';
 import Transaction from '../components/Transaction';
 import {addTransaction} from '../actions/transactions';
 
-class App extends Component {
+export class App extends Component {
 
   render(){
     //injected by connect() call;
