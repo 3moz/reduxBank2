@@ -4,7 +4,6 @@ import Transaction from './Transaction';
 export default class Ledger extends Component {
   render() {
     
-    console.log(this.props);
     return (
 
       <ul>

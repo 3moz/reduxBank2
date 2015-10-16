@@ -6,7 +6,11 @@ export default class AddTransaction extends Component {
     return (
 
       <div>
-        <input type='number' ref='input'/>
+        <input 
+        type='number' 
+        ref='input'
+        autofocus='true'
+        placeholder='enter amount'/>
         <button onClick = {element => this.handleClick(element)}>
         Add Transaction
         </button>
@@ -19,7 +23,7 @@ export default class AddTransaction extends Component {
     const node = this.refs.input;
     const value = node.value.trim();
     this.props.onAddClick(value);
-    node.value = 0;
+    node.value = null;
   }
 }
 
