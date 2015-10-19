@@ -2,7 +2,7 @@
 a simple banking app using flux / redux / react / bootstrap
 
 `npm start`, open at localhost:3001 ...
-`npm test`, run unit tests
+`npm test` to run unit tests
 
 ##a user can:
 - make a deposit
