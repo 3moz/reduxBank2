@@ -10,4 +10,4 @@ a simple banking app using flux / redux / react / bootstrap
 - see a running transaction history (a ledger)
 - see the current balance, given the transaction history
 - balance shows green when positive, red when negative
-- transactions can be integers or floating-point
+- make floating-point or integer transactions
