@@ -1,5 +1,5 @@
 # reduxBank
-a simple banking app using flux / redux / react / bootstrap
+a single-page banking app using flux / redux / react / bootstrap
 
 use it live <a href='http://104.236.5.181:3001/' target=none>here</a>
 
@@ -13,3 +13,5 @@ use it live <a href='http://104.236.5.181:3001/' target=none>here</a>
 - see the current balance, given the transaction history
 - see the balance area turn green when positive, red when negative
 - make floating-point or integer transactions
+
+all app behavior occurs without a server call
