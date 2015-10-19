@@ -12,7 +12,7 @@ export default class Balance extends Component {
 
     return (
 
-      <h2 className={balanceClass}>Balance: {this.props.balance}</h2>
+      <h2 className={balanceClass}>Balance: {this.props.balance.toFixed(2)}</h2>
     );
   }
 }
