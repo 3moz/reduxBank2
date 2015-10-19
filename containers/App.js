@@ -32,6 +32,8 @@ export class App extends Component {
         <div className="col-sm-4 col-sm-offset-4 form-group">
 
           <div className="text-center">
+          
+            <h3>e.m. moskowitz & co. bank </h3>
 
             <Balance balance={balance}/>
             
