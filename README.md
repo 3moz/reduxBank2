@@ -1,7 +1,7 @@
 # reduxBank
 a simple banking app using flux / redux / react / bootstrap
 
-use it live <a href='http://104.236.5.181:3001/'>here</a>
+use it live <a href='http://104.236.5.181:3001/' target=none>here</a>
 
 `npm start`, open at localhost:3001 ...
 `npm test` to run unit tests with mocha
