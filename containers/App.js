@@ -35,7 +35,7 @@ export class App extends Component {
 
             <Balance balance={balance}/>
             
-            <AddTransaction onAddClick={value => dispatch(addTransaction(parseInt(value)))}/>
+            <AddTransaction onAddClick={value => dispatch(addTransaction(parseFloat(value)))}/>
             
             <div>
               <h4>
