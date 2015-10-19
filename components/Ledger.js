@@ -6,7 +6,7 @@ export default class Ledger extends Component {
     
     return (
 
-      <ul className="list-unstyled">
+      <ul className="list-unstyled bg-info">
         Transaction Ledger:
         
         {this.props.transactions.map(
