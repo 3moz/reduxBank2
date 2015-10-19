@@ -27,13 +27,25 @@ export class App extends Component {
 
     return (
 
-      <div>
+      <div className="row">
 
-        <Balance balance={balance}/>
+        <div className="col-sm-4 col-sm-offset-4 form-group">
 
-        <AddTransaction onAddClick={value => dispatch(addTransaction(parseInt(value)))}/>
+          <div className="text-center">
 
-        <Ledger transactions={transactions}/>
+            <Balance balance={balance}/>
+            
+            <AddTransaction onAddClick={value => dispatch(addTransaction(parseInt(value)))}/>
+            
+            <div>
+              <h4>
+                <Ledger transactions={transactions}/>
+              </h4>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>    
     )

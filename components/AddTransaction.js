@@ -5,17 +5,30 @@ export default class AddTransaction extends Component {
   render() {
     return (
 
-      <div>
-        <input 
-        type='number' 
-        ref='input'
-        autofocus='true'
-        placeholder='enter amount'/>
-        <button onClick = {element => this.handleClick(element)}>
-        Add Transaction
-        </button>
-      </div>
+      <div className="form-horizontal">
+      
+        <div className="form-group">
+    
+          <div>
+            <input
+            className="form-control" 
+            type='number' 
+            ref='input'
+            autofocus='true'
+            placeholder='enter amount'/>
+          </div>  
+    
+          <div>
+            <button 
+            className="btn btn-primary" type="submit" value="Submit"
+            onClick = {element => this.handleClick(element)}>
+            Add Transaction
+            </button>
+          </div>
+    
+        </div>
 
+      </div>
     );
   }
 

@@ -6,7 +6,7 @@ export default class Balance extends Component {
     
     return (
 
-      <p>Balance: {this.props.balance}</p>
+      <h2>Balance: {this.props.balance}</h2>
     );
   }
 }
