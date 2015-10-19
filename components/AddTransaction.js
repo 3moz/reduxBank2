@@ -7,7 +7,7 @@ export default class AddTransaction extends Component {
 
       <div className="form-horizontal">
       
-        <div className="form-group">
+        
     
           <div>
             <span className="text-muted">positive number to deposit | negative number to withdraw</span>
@@ -27,7 +27,7 @@ export default class AddTransaction extends Component {
             </button>
           </div>
     
-        </div>
+        
 
       </div>
     );
