@@ -26,8 +26,11 @@ describe('components', () => {
 
       expect(output.type).toBe('div');
 
-      let [input, button] = output.props.children;
+      let [formDiv] = output.props.children;
+      let [inputDiv] = formDiv.props.children[0];
+      let [span, input] = inputDiv.props.children;
 
+      expect(span.props.className).toBe("text-muted");
       expect(input.props.type).toBe('number');
       // expect(input.props.ref).toBe('input');
       expect(input.props.autofocus).toBe('true');
@@ -38,10 +41,16 @@ describe('components', () => {
     it('should call onAddClick on buttonclick', () => {
       const {output, props} = setup();
 
-      let button = output.props.children[1]
-      let input = output.props.children[0]
+      expect(output.type).toBe('div');
 
-      button.props.onClick(4);
+      let [formDiv] = output.props.children;
+      let [buttonDiv] = formDiv.props.children[1];
+
+      let [button] = buttonDiv.props.children;
+
+      let input = output.props.children[0][0][0][1]//the content of the input field
+
+      button.props.onClick(4);//integer 4 is dummy input
       
       //this will throw error "TypeError: Cannot read property 'value' of undefined"
       //because value = node.value.trim() in the module and this test does not simulate
@@ -49,7 +58,7 @@ describe('components', () => {
       //however, the fact that the test is erroring at AddTransaction.handleClick
       //means that the call to onAddClick would be made if there was a live value in the
       //node = this.refs.input
-      
+
       expect(props.onAddClick.calls.length).toBe(1);
     })
   });

@@ -24,7 +24,7 @@ describe('components', () => {
     it('should render correctly', () => {
       const {output} = setup();
 
-      expect(output.type).toBe('p');
+      expect(output.type).toBe('h2');
 
       
     });
