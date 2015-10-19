@@ -9,5 +9,5 @@ a simple banking app using flux / redux / react / bootstrap
 - make a withdrawal
 - see a running transaction history (a ledger)
 - see the current balance, given the transaction history
-- balance shows green when positive, red when negative
+- see the balance area turn green when positive, red when negative
 - make floating-point or integer transactions
