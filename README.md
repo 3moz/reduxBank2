@@ -1,6 +1,9 @@
 # reduxBank
 a simple banking app using flux / redux / react / bootstrap
 
+`npm start`, open at localhost:3001
+`npm test`, run unit tests
+
 ##a user can:
 - make a deposit
 - make a withdrawal
