@@ -15,7 +15,6 @@ function transactions(state = initialState, action) {
       // console.log(state[state.length-1]);
       // console.log('action: ');
       // console.log(action);
-      
       return [...state,{        
         balance: state[state.length-1].transactions.reduce((a,b)=>a+b)+action.value,
 
