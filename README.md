@@ -1,5 +1,5 @@
 # reduxBank
-a single-page banking app using flux / redux / react / bootstrap
+a single-page, responsive banking app using flux / redux / react / bootstrap
 
 use it live <a href='http://104.236.5.181:3001/' target=none>here</a>
 
