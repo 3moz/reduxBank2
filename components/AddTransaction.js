@@ -6,29 +6,24 @@ export default class AddTransaction extends Component {
     return (
 
       <div className="form-horizontal">
-      
-        
-    
+
           <div>
             <span className="text-muted">positive number to deposit | negative number to withdraw</span>
             <input
-            className="form-control" 
-            type='number' 
+            className="form-control"
+            type='number'
             ref='input'
             autofocus='true'
             placeholder='enter amount'/>
-          </div>  
-    
+          </div>
+
           <div>
-            <button 
+            <button
             className="btn btn-primary" type="submit" value="Submit"
             onClick = {element => this.handleClick(element)}>
             Add Transaction
             </button>
           </div>
-    
-        
-
       </div>
     );
   }
@@ -44,4 +39,3 @@ export default class AddTransaction extends Component {
 AddTransaction.propTypes = {
   onAddClick: PropTypes.func.isRequired
 };
-

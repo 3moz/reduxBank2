@@ -18,7 +18,7 @@ import {addTransaction} from '../actions/transactions';
 
 export class App extends Component {
 
- 
+
 
   render(){
     //injected by connect() call;
@@ -32,13 +32,13 @@ export class App extends Component {
         <div className="col-sm-4 col-sm-offset-4 form-group">
 
           <div className="text-center">
-          
+
             <h3>e.m. moskowitz & co. bank </h3>
 
             <Balance balance={balance}/>
-            
+
             <AddTransaction onAddClick={value => dispatch(addTransaction(parseFloat(value)))}/>
-            
+
             <div>
               <h4>
                 <Ledger transactions={transactions}/>
@@ -49,7 +49,7 @@ export class App extends Component {
 
         </div>
 
-      </div>    
+      </div>
     )
   }
 }
@@ -60,11 +60,11 @@ App.propTypes = {
 };
 
 function mapStateToProps(state) {
-  // console.log(state.transactions[state.transactions.length-1].transactions); 
-  // console.log(state.transactions[state.transactions.length-1].balance);
   return {
-    transactions: state.transactions[state.transactions.length-1].transactions, //[]
-    balance: state.transactions[state.transactions.length-1].balance // number
+    //[]
+    transactions: state.transactions[state.transactions.length-1].transactions,
+    // number
+    balance: state.transactions[state.transactions.length-1].balance
   }
 }
 
